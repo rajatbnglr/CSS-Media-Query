@@ -1,15 +1,10 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main {
-    display: grid;
-    gap: 1em;
-    padding: 1em;
-}
+
 header {
     background-color: #4CAF50;
     color: white;
@@ -17,70 +12,60 @@ header {
     padding: 1em 0;
 }
 
-.text-block1{
+main {
     display: grid;
-    align-items: center;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr ; 
-    gap: 10px;
-    border: 2px solid #ddd;
+    gap: 1em;
+    padding: 1em;
+}
+
+.text-block {
+    border: 1px solid #ddd;
     padding: 1em;
     background-color: #f4f4f4;
- }
-
- .text-books
-{
-width: 60%; 
-/* font-weight: bold;
-align-items: center; */
 }
-.text-books img{
-    width: 150px;
-}
-
-@media all and (max-width: 540px) 
-{
-    .text-block1
-    {
+@media (max-width:540px) {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        background-color: darksalmon;
-        color: darkgoldenrod;
+        gap: 1em;
+        padding: 1em;
     }
-    
+    .text-block{
+        background-color: darksalmon;
+        color: yellow;
+    }
 }
-@media all and (min-width: 540px) 
-{
-    .text-block1
-    {
+@media (min-width:540px) and (max-width:767px) {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        gap: 10px;
+        gap: 1em;
+        padding: 1em;
+    }
+    .text-block{
         background-color: lightcoral;
         color: darkred;
     }
-    
 }
-@media all and (min-width: 768px) 
-{
-    .text-block1
-    {
+@media (min-width:768px) and (max-width:1023px) {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding: 1em;
+    }
+    .text-block{
         background-color: lightblue;
         color: darkblue;
     }
-    
-    }
-@media all and (min-width: 1024px) 
-{
-    .text-block1
-    {
+}
+@media (min-width:1024px) {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        padding: 1em;
+    }
+    .text-block{
         background-color: lightgreen;
         color: darkgreen;
-     }
-}     
+    }
+}
